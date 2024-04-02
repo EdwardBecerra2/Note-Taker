@@ -3,7 +3,7 @@ const path = require('path');
 
 function createdNote(body, notesArray) {
     const note = body;
-    notesArray.push(note);
+    notesArray.push(notesArray);
 
     fs.writeFileSync(
         path.join(__dirname, '../db/db.json'),
