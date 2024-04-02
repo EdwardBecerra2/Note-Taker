@@ -14,8 +14,10 @@ router.post('/notes', (req, res) => {
 });
 
 router.delete('/notes/:id', (req, res) => {
-    const note = deletedNote(req.params.id, notesArray);
-  res.json(note);
+    const { id } = req.params;
+    notesArray.splice(id, 1);
+    deletedNote(notesArray);
+    res.json(notesArray);
 });
 
 module.exports = router;
