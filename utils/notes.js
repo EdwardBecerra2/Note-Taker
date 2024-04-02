@@ -13,8 +13,14 @@ function createdNote(body, notesArray) {
 }
 
 function deletedNote(notesArray, id) {
-    let noteId = parseInt(id);
-    notesArray.splice(noteId, 1);
+    let notesId = parseInt(id);
+    notesArray.splice(notesId, 1);
+
+    let index = 0;
+    notesArray.forEach(notes => {
+        notes.id = index.toString();
+        index++;
+    });
 
     fs.writeFileSync(
         path.join(__dirname, '../db/db.json'),
