@@ -2,23 +2,23 @@ const fs = require('fs');
 const path = require('path');
 
 function createdNote(body, notesArray) {
-    const notes = body;
-    notesArray.push(notes);
+    const note = body;
+    notesArray.push(note);
 
     fs.writeFileSync(
         path.join(__dirname, '../db/db.json'),
         JSON.stringify({ notes: notesArray }, null, 2)
     );
-    return notes;
+    return note;
 }
 
 function deletedNote(notesArray, id) {
-    let notesId = parseInt(id);
-    notesArray.splice(notesId, 1);
+    let noteId = parseInt(id);
+    notesArray.splice(noteId, 1);
 
     let index = 0;
-    notesArray.forEach(notes => {
-        notes.id = index.toString();
+    notesArray.forEach(note => {
+        note.id = index.toString();
         index++;
     });
 

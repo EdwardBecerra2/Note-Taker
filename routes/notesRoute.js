@@ -8,9 +8,9 @@ router.get('/notes', (req, res) => {
 });
 
 router.post('/notes', (req, res) => {
-    req.body.id = notes.length.toString();
-  const notesArray = createdNote(req.body, notesArray);
-  res.json(notesArray);
+    req.body.id = notesArray.length.toString();
+    const note = createdNote(req.body, notesArray);
+  res.json(note);
 });
 
 router.delete('/notes/:id', (req, res) => {
