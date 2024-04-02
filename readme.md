@@ -19,13 +19,14 @@
   
 
   ## ScreenShot
-  N/A
+  ![Alt text](<Screenshot 2024-04-02 at 2.33.37 PM-1.png>)
+
 
   ## Usage 
   Start by entering a title along with a description for each new note and then click the save button to store your thoughts into the database. To get rid of throw away notes just click the delete button!! 
 
   ## LiveSite
-  N/A
+  https://notetaker21-ed0e6cbce95a.herokuapp.com/
 
   ## Questions
   Reach out to the repo owner, [EdwardBecerra2](https://github.com/EdwardBecerra2) at edwardbecera1207@gmail.com.
