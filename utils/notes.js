@@ -2,14 +2,14 @@ const fs = require('fs');
 const path = require('path');
 
 function createdNote(body, notesArray) {
-    const note = body;
-    notesArray.push(notesArray);
+    const notes = body;
+    notesArray.push(notes);
 
     fs.writeFileSync(
         path.join(__dirname, '../db/db.json'),
         JSON.stringify({ notes: notesArray }, null, 2)
     );
-    return note;
+    return notes;
 }
 
 function deletedNote(notesArray, id) {
